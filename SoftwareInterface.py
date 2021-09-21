@@ -12,7 +12,7 @@ from kivy.uix.boxlayout import BoxLayout
 from kivy.uix.button import Button
 from kivy.uix.screenmanager import ScreenManager, Screen
 from kivy.uix.image import Image
-import os
+
 
 class GridLay(GridLayout):
     def __init__(self, **kwargs):
@@ -34,13 +34,12 @@ class GridLay(GridLayout):
 class DataVisu(App):
     def build(self):
         self.screen_manager = ScreenManager()
-
         self.connect_page = ConnectPage()
         screen = Screen(name="Connect")
         screen.add_widget(self.connect_page)
         self.screen_manager.add_widget(screen)
 
-        return self.screen_manager
+        #return self.screen_manager
 
 
 
