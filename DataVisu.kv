@@ -1,0 +1,33 @@
+# Graphics.kv file of the code
+  
+# Creating Graphics for Start Page 
+  
+# Rectangle 
+  
+<Frame>
+    pos_hint: {'center_x': .2, 'center_y': .2}
+    # creating canvas
+    canvas:
+        
+        Color:
+            rgba: 0, 0, 1, 1    # Blue
+  
+        # size and position of Canvas
+        Line: 
+            rectangle:self.x, self.y, self.width-20, self.height-20
+            
+
+<Logo>:
+
+    on_size: self.center = win.Window.center
+    size: image.size
+    size_hint: None, None
+
+    Image:
+        id: image
+        source: 'Data Visualization Software/Data-Science-Software/DataVisu.jpeg'
+      
+  
+                    
+   
+   
