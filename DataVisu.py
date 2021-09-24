@@ -25,6 +25,10 @@ class Frame(Widget):
     pass    
 class Logo(Widget):
     pass    
+class StartButton(Widget):
+    pass
+class Box(Widget):
+    pass
             
 class DataVisu(App):
     def build(self):
@@ -32,9 +36,9 @@ class DataVisu(App):
         root = GridLayout(cols = 1)
         root.add_widget(Frame())
         root.add_widget(Logo())
-        # root.add_widget(Image(source ="DataVisu.jpeg"))
-        # self.start_page = Label(text = "Data Scince Program", color = [1,0,1,1])
-        # self.root.add_widget(self.start_page)
+        root.add_widget(StartButton())
+        root.add_widget(Box())
+        
         return root
     
     
