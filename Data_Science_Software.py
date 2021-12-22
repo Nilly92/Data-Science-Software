@@ -8,21 +8,19 @@ Created on Sat Aug 28 21:02:07 2021
 import pandas as pd
 import numpy as np
 import matplotlib.pyplot as plt
+import geopandas as gpd
 
-Data = pd.read_csv("species.csv")
 
 
-# Data Visualization 
+Data = pd.read_csv('C:/Users/las_v/OneDrive/Masaüstü/Data Science Projects/BioDiversity/Data Bio/species.csv')
 
-# Bar Graph
-Search = 'Park Name'
-x = Data[Data[Search]== Name]
+# Find The Location of Data Set
+# Choose the column
 
-plt.bar (x,y)
-plt.rcParams["figure.figsize"]=10,10
-plt.grid()
-plt.xlabel("x")   
-plt.ylabel("y")   
-plt.title('')
+on_press: root.btn_clk()
+
+
+ 
+
 
        

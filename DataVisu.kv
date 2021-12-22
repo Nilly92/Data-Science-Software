@@ -3,27 +3,34 @@
 # Creating Graphics for Start Page 
   
 # Rectangle 
-  
+
+
+MyScreenManager:
+    #transition: FadeTransition()
+    FirstWindow:
+    SecondWindow:
+
+<FirstWindow>:
+    name:"first"
+
 <Frame>
-    
-    # creating canvas
+
+# creating canvas
     canvas:
-        
+    
         Color:
-            rgba: rgba ('#003A51')
-  
-        # size and position of Canvas
+            rgba: rgba ('#003A51')  
         Line: 
             width: 5
             rectangle:self.x+20, self.y-130, self.width-40, self.height+100
-            
-                    
-            
-                  
+        
+                
+        
+              
 <StartButton>:
   
-        
-         
+    
+     
     Button:
         background_normal: ''
         background_color: rgba ('#003A51')
@@ -31,33 +38,47 @@
         size: 150,150
         pos: 600,80
         bold:True
+        on_release: 
+			app.root.current = "second"
+			root.manager.transition.direction = "left"
 
-<Logo>:
-
-    Image:
-        source: 'DataVisu.jpeg'
+        <Logo>:
         
-        size: 500, 500
-        pos: 0,-100
-        
-<Box>:
-   
-    Image:
-        source: 'PieChart.jpg'
-        size: 250, 300
-        pos:25,300
-    
-    Image:
-        source: 'Line.jpg'
-        size: 250, 300
-        pos:270,300
-    
-    Image:
-        source: 'BarChart.jpg'
-        size: 250, 300
-        pos:525,300    
+            Image:
+                source: 'DataVisu.jpeg'
+                size_hint: None,None
+                size: 500,500
+                pos: 0,-100
+            
+        <Box>:
+           
+            Image:
+                source: 'PieChart.jpg'
+                size: 250, 300
+                pos:25,300
+            
+            Image:
+                source: 'Line.jpg'
+                size: 250, 300
+                pos:270,300
+            
+            Image:
+                source: 'BarChart.jpg'
+                size: 250, 300
+                pos:525,300    
       
-  
-                    
+    
+<SecondWindow>:
+    name: "second" 
+    BoxLayout:
+    	orientation: "vertical"
+    	size: root.width, root.height
+    
+    Label:
+    	text: "Second Screen"
+    	font_size: 32
+    
+
+                
    
    
