@@ -12,61 +12,31 @@ MyScreenManager:
 
 <FirstWindow>:
     name:"first"
-
-<Frame>
-
-# creating canvas
-    canvas:
+    canvas.before:
+        Rectangle:
+            pos: self.pos
+            size: self.size
+            source: 'Cover.jpeg'
     
-        Color:
-            rgba: rgba ('#003A51')  
-        Line: 
-            width: 5
-            rectangle:self.x+20, self.y-130, self.width-40, self.height+100
-        
-                
-        
-              
-<StartButton>:
-  
-    
-     
     Button:
         background_normal: ''
-        background_color: rgba ('#003A51')
+        background_color: rgba ('3BABD9')
         text: "Let's Go!"
-        size: 150,150
-        pos: 600,80
+        size_hint: None,None
+        size: 180,180
+        pos:  70,350
         bold:True
         on_release: 
-			app.root.current = "second"
-			root.manager.transition.direction = "left"
+ 		   app.root.current = "second"
+ 		   root.manager.transition.direction = "left"
+    Image:
+        source: 'DataVisu.jpeg'
+        size_hint: None,None
+        size: 300,300
+        pos: 40,100
+     
+ 
 
-        <Logo>:
-        
-            Image:
-                source: 'DataVisu.jpeg'
-                size_hint: None,None
-                size: 500,500
-                pos: 0,-100
-            
-        <Box>:
-           
-            Image:
-                source: 'PieChart.jpg'
-                size: 250, 300
-                pos:25,300
-            
-            Image:
-                source: 'Line.jpg'
-                size: 250, 300
-                pos:270,300
-            
-            Image:
-                source: 'BarChart.jpg'
-                size: 250, 300
-                pos:525,300    
-      
     
 <SecondWindow>:
     name: "second" 
