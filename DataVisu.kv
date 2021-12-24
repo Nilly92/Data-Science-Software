@@ -23,8 +23,8 @@ MyScreenManager:
         background_color: rgba ('3BABD9')
         text: "Let's Go!"
         size_hint: None,None
-        size: 180,180
-        pos:  70,350
+        size: 150,150
+        pos:  90,380
         bold:True
         on_release: 
  		   app.root.current = "second"
@@ -40,9 +40,17 @@ MyScreenManager:
     
 <SecondWindow>:
     name: "second" 
-    BoxLayout:
-    	orientation: "vertical"
-    	size: root.width, root.height
+    Button:
+        background_normal: ''
+        background_color: rgba ('3BABD9')
+        text: "Back"
+        size_hint: None,None
+        size: 70,40
+        pos:  50,500
+        bold:True
+        on_release: 
+ 		   app.root.current = "first"
+ 		   root.manager.transition.direction = "right"
     
     Label:
     	text: "Second Screen"
