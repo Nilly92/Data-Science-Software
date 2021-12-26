@@ -40,6 +40,7 @@ MyScreenManager:
     
 <SecondWindow>:
     name: "second" 
+     
     Button:
         background_normal: ''
         background_color: rgba ('3BABD9')
@@ -51,11 +52,41 @@ MyScreenManager:
         on_release: 
  		   app.root.current = "first"
  		   root.manager.transition.direction = "right"
-    
-    Label:
-    	text: "Second Screen"
-    	font_size: 32
-    
+   
+    GridLayout:
+        
+        rows: 3
+        cols: 4
+        padding: 12
+        spacing: 10
+        size_hint: [.8,.2]
+        pos:  100,400         
+        
+        Label:
+            text: 'label'
+        TextInput:
+            text: 'Choose Dataset'
+        Button:
+            text: 'Choose'
+            background_color: rgba ('3BABD9')
+            app.root.current = "first"
+        CheckBox: 
+            text: 'CheckBox'
+            background_color: rgba ('3BABD9')
+        Label:
+            text: 'label'
+        TextInput:
+            text: 'Entry'
+        Button:
+            text: 'Choose'
+            background_color: rgba ('3BABD9')
+        CheckBox: 
+            text: 'CheckBox'
+            background_color: rgba ('3BABD9')    
+        
+     
+     
+       
 
                 
    
